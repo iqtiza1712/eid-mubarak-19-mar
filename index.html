@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FFE4E1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Eid Mubarak, My Love 💕</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23B76E79'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="hero">
+        <div class="hero-background" id="heroBackground"></div>
+        <div class="hero-overlay"></div>
+        <div class="floating-hearts" id="floatingHearts"></div>
+        
+        <div class="hero-content">
+            <div class="hero-heart animate-pulse-heart">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </div>
+            <h1 class="hero-title font-dancing">Eid Mubarak, Sana (My Jaan)</h1>
+            <p class="hero-subtitle font-inter">A little Eidi for the one who owns my heart 💕</p>
+            
+            <!-- Islamic Shayri -->
+            <div class="shayri-box">
+                <p class="shayri font-amiri">"تم میری دعاؤں میں ہو، میری آہوں میں ہو</p>
+                <p class="shayri font-amiri">اللہ سے مانگا تھا تمہیں، تم اللہ کی رحمتوں میں ہو"</p>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span class="font-inter">Scroll to explore</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== AUDIO PLAYER ==================== -->
+    <div class="audio-player" id="audioPlayer">
+        <div class="audio-prompt" id="audioPrompt">🎵 Play Nasheed</div>
+        <button class="audio-btn" id="audioBtn">
+            <svg id="playIcon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+            <div id="soundWaves" class="sound-waves" style="display: none;">
+                <div class="sound-wave"></div>
+                <div class="sound-wave"></div>
+                <div class="sound-wave"></div>
+            </div>
+        </button>
+    </div>
+    <!-- Maher Zain - Baraka Allahu Lakuma (Islamic Wedding Nasheed) -->
+    <audio id="bgMusic" loop preload="auto" src="https://ia600605.us.archive.org/8/items/MaherZainBarakaAllahuLakuma/Maher%20Zain%20-%20Baraka%20Allahu%20Lakuma.mp3"></audio>
+
+    <!-- ==================== TIMELINE SECTION ==================== -->
+    <section id="timeline">
+        <div class="section-header">
+            <h2 class="section-title font-dancing">Our Story</h2>
+            <p class="section-subtitle font-inter">Every moment with you has been a beautiful chapter</p>
+            <p class="shayri-small font-amiri">"ہر لمحہ تیرے ساتھ ایک نعمت ہے"</p>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-item" data-animate>
+                <div class="timeline-content">
+                    <span class="timeline-date font-inter">January 2, 2025 • 3:40 PM</span>
+                    <h3 class="timeline-title font-dancing">First Meet</h3>
+                    <p class="timeline-location font-inter">📍 Set by our parents</p>
+                    <div class="timeline-description">
+                        <p class="timeline-description-title font-inter">The Moment Everything Changed</p>
+                        <p class="timeline-description-text font-inter">When our families arranged for us to meet, I never expected to find someone so beautiful. At exactly 3:40 PM, my life changed forever when I first saw you, Sana.</p>
+                        <p class="shayri-card font-amiri">"تیرے آنے کی آہٹ ہو گئی<br>دل کی دھڑکن تیز ہو گئی"</p>
+                    </div>
+                </div>
+                <div class="timeline-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="timeline-item" data-animate>
+                <div class="timeline-content">
+                    <span class="timeline-date font-inter">January 7, 2025</span>
+                    <h3 class="timeline-title font-dancing">First Chat</h3>
+                    <p class="timeline-location font-inter">💬 Where words became magic</p>
+                    <div class="timeline-description">
+                        <p class="timeline-description-title font-inter">The Beginning of Us</p>
+                        <p class="timeline-description-text font-inter">Five days felt like an eternity waiting to talk to you. When we finally started chatting, every message from you made my heart race.</p>
+                        <p class="shayri-card font-amiri">"اور کچھ دیر ٹھہر جاؤ نہ<br>ابھی کچھ باتیں باقی ہیں"</p>
+                    </div>
+                </div>
+                <div class="timeline-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="timeline-item" data-animate>
+                <div class="timeline-content">
+                    <span class="timeline-date font-inter">January 10, 2025</span>
+                    <h3 class="timeline-title font-dancing">First Call</h3>
+                    <p class="timeline-location font-inter">📞 Your voice became my favorite sound</p>
+                    <div class="timeline-description">
+                        <p class="timeline-description-title font-inter">When I Heard Your Voice</p>
+                        <p class="timeline-description-text font-inter">Hearing your voice for the first time... Sana, it was like music. We talked, we laughed, we shared so much. I knew then that you were special.</p>
+                        <p class="shayri-card font-amiri">"تم بولو تو ہر بات حسین لگتی ہے<br>آواز تمہاری میری جان لگتی ہے"</p>
+                    </div>
+                </div>
+                <div class="timeline-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-animate>
+                <div class="timeline-content">
+                    <span class="timeline-date font-inter">Every Day Since...</span>
+                    <h3 class="timeline-title font-dancing">We Share Everything</h3>
+                    <p class="timeline-location font-inter">💕 Building our bond</p>
+                    <div class="timeline-description">
+                        <p class="timeline-description-title font-inter">Our Beautiful Journey</p>
+                        <p class="timeline-description-text font-inter">From sharing our dreams to our fears, our jokes to our secrets — every moment with you, Sana, has been a gift. You've become my best friend, my confidante, my everything.</p>
+                        <p class="shayri-card font-amiri">"دل ہی تو ہے نہ سنگ و خشت<br>درد سے بھر نہ آئے کیوں" — فیض</p>
+                    </div>
+                </div>
+                <div class="timeline-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY YOU SECTION ==================== -->
+    <section id="whyYou">
+        <div class="section-header">
+            <h2 class="section-title font-dancing">Why You?</h2>
+            <p class="section-subtitle font-inter">There are a million reasons, but here are just a few...</p>
+            <p class="shayri-small font-amiri">"اللہ نے تمہیں میرے لیے بنایا ہے"</p>
+        </div>
+        
+        <div class="carousel-container">
+            <div class="carousel hide-scrollbar" id="carousel">
+                <div class="carousel-card">
+                    <div class="carousel-emoji">😊</div>
+                    <div class="carousel-number">1</div>
+                    <h3 class="carousel-title font-dancing">Your Smile</h3>
+                    <p class="carousel-text font-inter">The way your eyes crinkle when you laugh makes my heart skip a beat.</p>
+                    <p class="shayri-card font-amiri">"تمہاری مسکراہٹ میری جنت ہے"</p>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-emoji">🤲</div>
+                    <div class="carousel-number">2</div>
+                    <h3 class="carousel-title font-dancing">Your Imaan</h3>
+                    <p class="carousel-text font-inter">Your faith in Allah inspires me to be a better Muslim every day.</p>
+                    <p class="shayri-card font-amiri">"تمہارا ایمان میری طاقت ہے"</p>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-emoji">💝</div>
+                    <div class="carousel-number">3</div>
+                    <h3 class="carousel-title font-dancing">Your Kindness</h3>
+                    <p class="carousel-text font-inter">The way you treat everyone with warmth and compassion.</p>
+                    <p class="shayri-card font-amiri">"تمہارے اخلاق میری دولت ہیں"</p>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-emoji">🌙</div>
+                    <div class="carousel-number">4</div>
+                    <h3 class="carousel-title font-dancing">Your Dua</h3>
+                    <p class="carousel-text font-inter">Knowing you pray for us gives me peace like nothing else.</p>
+                    <p class="shayri-card font-amiri">"تمہاری دعائیں میرا سہارا ہیں"</p>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-emoji">❤️</div>
+                    <div class="carousel-number">5</div>
+                    <h3 class="carousel-title font-dancing">Your Heart</h3>
+                    <p class="carousel-text font-inter">The depth of your love - you have the most beautiful soul.</p>
+                    <p class="shayri-card font-amiri">"تمہارا دل اللہ کا نور ہے"</p>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+            <p class="carousel-hint font-inter">← Swipe to see more →</p>
+        </div>
+    </section>
+
+    <!-- ==================== PROMISES SECTION ==================== -->
+    <section id="promises">
+        <div class="section-header">
+            <h2 class="section-title font-dancing">My Promises to You</h2>
+            <p class="section-subtitle font-inter">These vows I make before Allah</p>
+            <p class="shayri-small font-amiri">"میرے وعدے اللہ کے سامنے ہیں"</p>
+        </div>
+        
+        <div class="promises-grid">
+            <div class="promise-card" data-animate>
+                <div class="promise-icon">🤲</div>
+                <h3 class="promise-title font-dancing">To Pray Together</h3>
+                <p class="promise-text font-inter">I promise we will grow in our deen together, side by side.</p>
+                <p class="shayri-card font-amiri">"ساتھ نماز، ساتھ جنت"</p>
+            </div>
+            <div class="promise-card" data-animate>
+                <div class="promise-icon">🛡️</div>
+                <h3 class="promise-title font-dancing">To Protect You</h3>
+                <p class="promise-text font-inter">I promise to guard your heart, your honor, and your happiness.</p>
+                <p class="shayri-card font-amiri">"تمہاری حفاظت میرا فرض ہے"</p>
+            </div>
+            <div class="promise-card" data-animate>
+                <div class="promise-icon">☀️</div>
+                <h3 class="promise-title font-dancing">To Be Your Peace</h3>
+                <p class="promise-text font-inter">I promise to be your sukoon in this chaotic world.</p>
+                <p class="shayri-card font-amiri">"میں تمہارا سکون بنوں گا"</p>
+            </div>
+            <div class="promise-card" data-animate>
+                <div class="promise-icon">♾️</div>
+                <h3 class="promise-title font-dancing">Forever & Akhirah</h3>
+                <p class="promise-text font-inter">I promise to love you in this life and pray for us in Jannah.</p>
+                <p class="shayri-card font-amiri">"دنیا میں بھی، آخرت میں بھی"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SHAYRI SECTION ==================== -->
+    <section id="shayri">
+        <div class="section-header">
+            <h2 class="section-title font-dancing">Words from My Heart</h2>
+            <p class="section-subtitle font-inter">Some feelings can only be expressed in poetry</p>
+        </div>
+        
+        <div class="shayri-gallery">
+            <div class="shayri-item" data-animate>
+                <div class="shayri-content font-amiri">
+                    <p>"محبت وہ نہیں جو دل میں ہو</p>
+                    <p>محبت وہ ہے جو دعاؤں میں ہو"</p>
+                </div>
+                <p class="shayri-translation font-inter">"Love is not just what's in the heart, love is what's in your prayers"</p>
+            </div>
+            <div class="shayri-item" data-animate>
+                <div class="shayri-content font-amiri">
+                    <p>"تم سے ملنا بھی اک عبادت ہے</p>
+                    <p>تم سے ملنا خدا کی رحمت ہے"</p>
+                </div>
+                <p class="shayri-translation font-inter">"Meeting you is like worship, meeting you is Allah's mercy"</p>
+            </div>
+            <div class="shayri-item" data-animate>
+                <div class="shayri-content font-amiri">
+                    <p>"اللہ سے مانگی تھی خوشیاں</p>
+                    <p>اس نے تمہیں بھیج دیا"</p>
+                </div>
+                <p class="shayri-translation font-inter">"I asked Allah for happiness, He sent you"</p>
+            </div>
+            <div class="shayri-item" data-animate>
+                <div class="shayri-content font-amiri">
+                    <p>"جنت کی حور نہیں چاہیے مجھے</p>
+                    <p>بس تم ہو میری جنت"</p>
+                </div>
+                <p class="shayri-translation font-inter">"I don't need the hoor of Jannah, you are my paradise"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EIDI REVEAL SECTION ==================== -->
+    <section id="eidi" class="eidi-section">
+        <div class="section-header">
+            <h2 class="section-title font-dancing">Your Eidi 💝</h2>
+            <p class="shayri-small font-amiri">"عید کا تحفہ، دل سے دل تک"</p>
+        </div>
+        
+        <!-- Compact Gift Box -->
+        <div class="gift-reveal-container">
+            <div class="gift-box-wrapper" id="giftBoxBtn">
+                <div class="gift-glow"></div>
+                <div class="gift-box">
+                    <div class="gift-lid">
+                        <div class="gift-bow">
+                            <div class="bow-left"></div>
+                            <div class="bow-right"></div>
+                            <div class="bow-center"></div>
+                        </div>
+                    </div>
+                    <div class="gift-body">
+                        <div class="gift-ribbon-v"></div>
+                        <div class="gift-ribbon-h"></div>
+                    </div>
+                </div>
+                <p class="gift-prompt font-inter animate-bounce">✨ Tap to reveal ✨</p>
+            </div>
+            
+            <p class="mystery-hint font-dancing">Something special awaits... 💕</p>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal gift-modal">
+            <button class="modal-close" id="modalClose">✕</button>
+            
+            <div class="modal-surprise-icon">
+                <span class="surprise-emoji">🎁</span>
+                <span class="surprise-emoji delay">💝</span>
+            </div>
+            
+            <h3 class="modal-title font-dancing">Surprise! 💓</h3>
+            
+            <div class="modal-content">
+                <div class="reveal-card">
+                    <div class="reveal-badge">🌙 Eid Special 🌙</div>
+                    <p class="reveal-main font-dancing">Your Gift Awaits...</p>
+                    <p class="reveal-sub font-inter">In Person! 💕</p>
+                    
+                    <div class="reveal-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">📦</span>
+                            <span class="detail-text font-inter">Wrapped with love & prayers</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">💌</span>
+                            <span class="detail-text font-inter">A letter from my heart</span>
+                        </div>
+                    </div>
+                    
+                    <p class="shayri-card font-amiri">"تمہارے ہاتھوں میں رکھوں گا یہ تحفہ"</p>
+                </div>
+            </div>
+            
+            <button class="modal-btn font-inter" id="acceptBtn">I'm So Excited! 💕</button>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div class="confetti" id="confetti"></div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer id="footer">
+        <div class="footer-hearts">
+            <span class="footer-heart">💕</span>
+            <span class="footer-heart">🌙</span>
+            <span class="footer-heart">💕</span>
+        </div>
+        <h3 class="footer-title font-dancing">Forever & Always</h3>
+        <p class="footer-text font-inter">This is just the beginning of our beautiful journey together. May Allah bless our bond.</p>
+        
+        <div class="footer-shayri">
+            <p class="shayri font-amiri">"ہر جنم میں تم ہی ہو، ہر جہاں میں تم ہی ہو</p>
+            <p class="shayri font-amiri">دنیا میں بھی تم، آخرت میں بھی تم"</p>
+        </div>
+        
+        <div class="footer-signature">
+            <p class="footer-signature-text font-dancing">With all my love,</p>
+            <p class="footer-signature-name font-inter">Your Future Husband 💍</p>
+        </div>
+        <p class="footer-copyright font-inter">Made with 💕 just for you • Eid Mubarak 2026</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
