@@ -129,8 +129,239 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ==================== FLOATING HEARTS ON CLICK ====================
+function createClickHeart(x, y) {
+    const hearts = ['💕', '💖', '💗', '💓', '❤️', '🌸', '✨'];
+    const heart = document.createElement('div');
+    heart.className = 'click-heart';
+    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+    heart.style.left = x + 'px';
+    heart.style.top = y + 'px';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 1500);
+}
+
+// Add hearts on click/tap anywhere
+document.addEventListener('click', (e) => {
+    // Create 2-3 hearts per click
+    for (let i = 0; i < Math.floor(Math.random() * 2) + 2; i++) {
+        setTimeout(() => {
+            createClickHeart(
+                e.clientX + (Math.random() - 0.5) * 40,
+                e.clientY + (Math.random() - 0.5) * 40
+            );
+        }, i * 100);
+    }
+});
+
+// ==================== SHAYRI CARD TAP INTERACTION ====================
+document.querySelectorAll('.shayri-card').forEach(card => {
+    card.addEventListener('click', function() {
+        this.classList.toggle('tapped');
+        
+        // Create sparkle effect
+        for (let i = 0; i < 5; i++) {
+            setTimeout(() => {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                const rect = this.getBoundingClientRect();
+                sparkle.style.left = rect.left + Math.random() * rect.width + 'px';
+                sparkle.style.top = rect.top + Math.random() * rect.height + 'px';
+                sparkle.style.background = ['#EC4899', '#F9A8D4', '#FFE4EC'][Math.floor(Math.random() * 3)];
+                document.body.appendChild(sparkle);
+                setTimeout(() => sparkle.remove(), 800);
+            }, i * 50);
+        }
+    });
+});
+
+// ==================== LOVE COUNTER ANIMATION ====================
+function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16);
+    const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+            element.textContent = target.toLocaleString() + '+';
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(start).toLocaleString();
+        }
+    }, 16);
+}
+
+// Counter observer
+const counterSection = document.getElementById('counter');
+let countersAnimated = false;
+
+if (counterSection) {
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !countersAnimated) {
+                countersAnimated = true;
+                animateCounter(document.getElementById('msgCounter'), 1000, 2500);
+                animateCounter(document.getElementById('thoughtCounter'), 9999, 3000);
+                animateCounter(document.getElementById('smileCounter'), 500, 2000);
+                animateCounter(document.getElementById('duaCounter'), 100, 1500);
+            }
+        });
+    }, { threshold: 0.3 });
+    
+    counterObserver.observe(counterSection);
+}
+
+// Counter items tap effect - increment on tap
+document.querySelectorAll('.counter-item').forEach(item => {
+    item.addEventListener('click', function() {
+        const counter = this.querySelector('.counter-number');
+        const currentVal = parseInt(counter.textContent.replace(/[^0-9]/g, '')) || 0;
+        counter.textContent = (currentVal + 1).toLocaleString() + '+';
+        
+        // Pop animation
+        this.style.transform = 'scale(1.1)';
+        setTimeout(() => this.style.transform = '', 200);
+    });
+});
+
+// ==================== SCRATCH CARD ====================
+const scratchCard = document.getElementById('scratchCard');
+const scratchOverlay = document.getElementById('scratchOverlay');
+
+if (scratchCard && scratchOverlay) {
+    scratchCard.addEventListener('click', () => {
+        scratchOverlay.classList.add('revealed');
+        
+        // Create celebration effect
+        for (let i = 0; i < 20; i++) {
+            setTimeout(() => {
+                createClickHeart(
+                    scratchCard.getBoundingClientRect().left + Math.random() * scratchCard.offsetWidth,
+                    scratchCard.getBoundingClientRect().top + Math.random() * scratchCard.offsetHeight
+                );
+            }, i * 50);
+        }
+    });
+}
+
+// ==================== LOVE QUIZ ====================
+document.querySelectorAll('.quiz-option').forEach(option => {
+    option.addEventListener('click', function() {
+        const isCorrect = this.dataset.correct === 'true';
+        
+        // Remove previous selections
+        document.querySelectorAll('.quiz-option').forEach(o => {
+            o.classList.remove('selected', 'correct');
+        });
+        
+        this.classList.add('selected');
+        
+        if (isCorrect) {
+            this.classList.add('correct');
+            document.getElementById('quizResult').classList.add('show');
+            
+            // Celebration!
+            createConfetti();
+        }
+    });
+});
+
+// ==================== DOUBLE TAP FOR BIG HEART ====================
+let lastTap = 0;
+document.addEventListener('touchend', (e) => {
+    const currentTime = new Date().getTime();
+    const tapLength = currentTime - lastTap;
+    
+    if (tapLength < 300 && tapLength > 0) {
+        // Double tap detected!
+        const bigHeart = document.createElement('div');
+        bigHeart.className = 'big-heart-pop';
+        bigHeart.textContent = '❤️';
+        document.body.appendChild(bigHeart);
+        setTimeout(() => bigHeart.remove(), 1000);
+        
+        e.preventDefault();
+    }
+    lastTap = currentTime;
+});
+
+// ==================== FEELING CARD SOUNDS (HAPTIC FEEDBACK) ====================
+document.querySelectorAll('.feeling-card').forEach(card => {
+    card.addEventListener('click', function() {
+        // Visual feedback
+        const icon = this.querySelector('.feeling-icon');
+        if (icon) {
+            icon.style.transform = 'scale(1.5) rotate(15deg)';
+            setTimeout(() => icon.style.transform = '', 400);
+        }
+        
+        // Try haptic feedback on mobile
+        if (navigator.vibrate) {
+            navigator.vibrate(50);
+        }
+    });
+});
+
+// ==================== SPARKLE TRAIL ON TOUCH MOVE ====================
+let sparkleTimeout;
+document.addEventListener('touchmove', (e) => {
+    if (sparkleTimeout) return;
+    
+    sparkleTimeout = setTimeout(() => {
+        const touch = e.touches[0];
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        sparkle.style.left = touch.clientX + 'px';
+        sparkle.style.top = touch.clientY + 'px';
+        sparkle.style.width = '6px';
+        sparkle.style.height = '6px';
+        document.body.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 800);
+        sparkleTimeout = null;
+    }, 50);
+});
+
+// ==================== HERO SECTION TAP ANIMATION ====================
+const heroHeart = document.querySelector('.hero-heart');
+if (heroHeart) {
+    heroHeart.addEventListener('click', () => {
+        heroHeart.style.transform = 'scale(1.5)';
+        heroHeart.style.transition = 'transform 0.3s';
+        
+        // Burst of hearts
+        for (let i = 0; i < 8; i++) {
+            setTimeout(() => {
+                const rect = heroHeart.getBoundingClientRect();
+                createClickHeart(
+                    rect.left + rect.width / 2 + (Math.random() - 0.5) * 100,
+                    rect.top + rect.height / 2 + (Math.random() - 0.5) * 100
+                );
+            }, i * 80);
+        }
+        
+        setTimeout(() => heroHeart.style.transform = '', 300);
+    });
+}
+
+// ==================== LETTER PAPER UNFOLD EFFECT ====================
+const letterPaper = document.querySelector('.letter-paper');
+if (letterPaper) {
+    letterPaper.addEventListener('click', function() {
+        this.style.transform = 'scale(1.02)';
+        this.style.boxShadow = '0 20px 60px rgba(236, 72, 153, 0.2)';
+        setTimeout(() => {
+            this.style.transform = '';
+            this.style.boxShadow = '';
+        }, 300);
+    });
+}
+
 // ==================== INITIALIZE ====================
 document.addEventListener('DOMContentLoaded', () => {
     createFloatingPetals();
     initScrollAnimations();
+    
+    // Add touch-friendly class to body
+    if ('ontouchstart' in window) {
+        document.body.classList.add('touch-device');
+    }
 });
