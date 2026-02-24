@@ -1,124 +1,3 @@
-// ==================== FLASH CARD NAVIGATION ====================
-const sections = document.querySelectorAll('.slide-card');
-let currentSlide = 0;
-let isAnimating = false;
-const totalSlides = sections.length;
-
-// Create navigation
-function createNavDots() {
-    const navContainer = document.createElement('div');
-    navContainer.className = 'slide-nav';
-    navContainer.innerHTML = `
-        <button class="nav-arrow nav-prev" id="navPrev">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 18l-6-6 6-6"/>
-            </svg>
-        </button>
-        <div class="nav-dots" id="navDots"></div>
-        <button class="nav-arrow nav-next" id="navNext">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 18l6-6-6-6"/>
-            </svg>
-        </button>
-    `;
-    document.body.appendChild(navContainer);
-
-    const dotsContainer = document.getElementById('navDots');
-    sections.forEach((_, index) => {
-        const dot = document.createElement('button');
-        dot.className = `nav-dot${index === 0 ? ' active' : ''}`;
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-    });
-
-    document.getElementById('navPrev').addEventListener('click', prevSlide);
-    document.getElementById('navNext').addEventListener('click', nextSlide);
-}
-
-function initSlides() {
-    sections.forEach((section, index) => {
-        if (index === 0) {
-            section.classList.add('active', 'visible');
-        }
-    });
-    createNavDots();
-    createFloatingPetals();
-    updateNavArrows();
-}
-
-function goToSlide(index) {
-    if (isAnimating || index === currentSlide || index < 0 || index >= totalSlides) return;
-    
-    isAnimating = true;
-    const direction = index > currentSlide ? 'next' : 'prev';
-    const currentSection = sections[currentSlide];
-    const nextSection = sections[index];
-
-    currentSection.classList.add(`slide-out-${direction}`);
-    nextSection.classList.add(`slide-in-${direction}`, 'active', 'visible');
-
-    document.querySelectorAll('.nav-dot').forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
-    });
-
-    setTimeout(() => {
-        currentSection.classList.remove('active', `slide-out-${direction}`);
-        nextSection.classList.remove(`slide-in-${direction}`);
-        currentSlide = index;
-        isAnimating = false;
-        updateNavArrows();
-    }, 500);
-}
-
-function nextSlide() {
-    if (currentSlide < totalSlides - 1) goToSlide(currentSlide + 1);
-}
-
-function prevSlide() {
-    if (currentSlide > 0) goToSlide(currentSlide - 1);
-}
-
-function updateNavArrows() {
-    document.getElementById('navPrev')?.classList.toggle('disabled', currentSlide === 0);
-    document.getElementById('navNext')?.classList.toggle('disabled', currentSlide === totalSlides - 1);
-}
-
-// Keyboard navigation
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') nextSlide();
-    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prevSlide();
-});
-
-// Touch/Swipe
-let touchStartX = 0, touchStartY = 0;
-
-document.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-    touchStartY = e.changedTouches[0].screenY;
-}, { passive: true });
-
-document.addEventListener('touchend', (e) => {
-    const diffX = touchStartX - e.changedTouches[0].screenX;
-    const diffY = touchStartY - e.changedTouches[0].screenY;
-    
-    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-        diffX > 0 ? nextSlide() : prevSlide();
-    } else if (Math.abs(diffY) > 50) {
-        diffY > 0 ? nextSlide() : prevSlide();
-    }
-}, { passive: true });
-
-// Mouse wheel
-let wheelTimeout;
-document.addEventListener('wheel', (e) => {
-    clearTimeout(wheelTimeout);
-    wheelTimeout = setTimeout(() => {
-        e.deltaY > 30 ? nextSlide() : e.deltaY < -30 ? prevSlide() : null;
-    }, 50);
-}, { passive: true });
-
-document.addEventListener('DOMContentLoaded', initSlides);
-
 // ==================== FLOATING PETALS ====================
 function createFloatingPetals() {
     const container = document.getElementById('floatingPetals');
@@ -126,18 +5,37 @@ function createFloatingPetals() {
     
     const colors = ['#FFE4EC', '#FBCFE8', '#F9A8D4', '#FFF0F3'];
     
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 12; i++) {
         const petal = document.createElement('div');
         petal.className = 'petal';
         petal.style.left = `${Math.random() * 100}%`;
         petal.style.background = colors[Math.floor(Math.random() * colors.length)];
-        petal.style.width = `${Math.random() * 10 + 10}px`;
+        petal.style.width = `${Math.random() * 8 + 8}px`;
         petal.style.height = petal.style.width;
         petal.style.animationDuration = `${Math.random() * 10 + 12}s`;
         petal.style.animationDelay = `${Math.random() * 8}s`;
-        petal.style.transform = `rotate(${Math.random() * 360}deg)`;
         container.appendChild(petal);
     }
+}
+
+// ==================== SCROLL ANIMATIONS ====================
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('aos-animate');
+            }
+        });
+    }, observerOptions);
+    
+    document.querySelectorAll('[data-aos]').forEach(el => {
+        observer.observe(el);
+    });
 }
 
 // ==================== AUDIO PLAYER ====================
@@ -215,4 +113,24 @@ modalClose?.addEventListener('click', closeModal);
 acceptBtn?.addEventListener('click', closeModal);
 modalOverlay?.addEventListener('click', (e) => {
     if (e.target === modalOverlay) closeModal();
+});
+
+// ==================== SMOOTH SCROLL ====================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// ==================== INITIALIZE ====================
+document.addEventListener('DOMContentLoaded', () => {
+    createFloatingPetals();
+    initScrollAnimations();
 });
