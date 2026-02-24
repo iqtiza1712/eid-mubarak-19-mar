@@ -3,375 +3,477 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#FFE4E1">
+    <meta name="theme-color" content="#FFF5F5">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Eid Mubarak, My Love 💕</title>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>For You, Sana 💕</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Dancing+Script:wght@500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23B76E79'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💕</text></svg>">
     
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- ==================== HERO SECTION ==================== -->
-    <section class="hero" id="hero">
-        <div class="hero-background" id="heroBackground"></div>
-        <div class="hero-overlay"></div>
-        <div class="floating-hearts" id="floatingHearts"></div>
-        
-        <div class="hero-content">
-            <div class="hero-heart animate-pulse-heart">
+    <!-- Floating Petals -->
+    <div class="floating-petals" id="floatingPetals"></div>
+
+    <!-- ==================== SLIDE 1: WELCOME ==================== -->
+    <section class="slide-card" id="welcome">
+        <div class="slide-content welcome-content">
+            <div class="welcome-badge">For My Special One</div>
+            
+            <div class="welcome-heart">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                 </svg>
             </div>
-            <h1 class="hero-title font-dancing">Eid Mubarak, Sana (My Jaan)</h1>
-            <p class="hero-subtitle font-inter">A little Eidi for the one who owns my heart 💕</p>
             
-            <!-- Islamic Shayri -->
-            <div class="shayri-box">
-                <p class="shayri font-amiri">"تم میری دعاؤں میں ہو، میری آہوں میں ہو</p>
-                <p class="shayri font-amiri">اللہ سے مانگا تھا تمہیں، تم اللہ کی رحمتوں میں ہو"</p>
+            <h1 class="welcome-title">Eid Mubarak</h1>
+            <p class="welcome-name">Sana</p>
+            
+            <div class="welcome-quote">
+                <p>"You are my answered prayer"</p>
             </div>
             
-            <div class="scroll-indicator">
-                <span class="font-inter">Scroll to explore</span>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-                </svg>
+            <div class="scroll-hint">
+                <span>Swipe to explore</span>
+                <div class="scroll-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== AUDIO PLAYER ==================== -->
+    <!-- ==================== SLIDE 2: FIRST MEMORY ==================== -->
+    <section class="slide-card" id="memory1">
+        <div class="slide-content memory-content">
+            <div class="memory-date">
+                <span class="date-day">02</span>
+                <span class="date-month">January</span>
+            </div>
+            
+            <h2 class="memory-title">When I First Saw You</h2>
+            
+            <div class="memory-card">
+                <div class="memory-icon">✨</div>
+                <p class="memory-text">
+                    My heart stopped for a moment. I didn't know someone could look so beautiful, 
+                    so peaceful, so perfect. That day, without even knowing you, 
+                    I knew you were special.
+                </p>
+            </div>
+            
+            <div class="feeling-tag">
+                <span class="feeling-emoji">🦋</span>
+                <span class="feeling-text">Butterflies</span>
+            </div>
+            
+            <p class="memory-urdu">"پہلی نظر میں ہی دل کھو بیٹھا"</p>
+        </div>
+    </section>
+
+    <!-- ==================== SLIDE 3: FIRST CHAT ==================== -->
+    <section class="slide-card" id="memory2">
+        <div class="slide-content memory-content">
+            <div class="memory-date">
+                <span class="date-day">07</span>
+                <span class="date-month">January</span>
+            </div>
+            
+            <h2 class="memory-title">Our First Conversation</h2>
+            
+            <div class="chat-preview">
+                <div class="chat-bubble received">
+                    <p>Assalamualaikum</p>
+                </div>
+                <div class="chat-bubble sent">
+                    <p>Walikumasalam</p>
+                </div>
+                <div class="chat-bubble sent">
+                    <p>I've been waiting to talk to you 💕</p>
+                </div>
+            </div>
+            
+            <div class="memory-card">
+                <div class="memory-icon">💬</div>
+                <p class="memory-text">
+                    Every notification from you made my heart race. I would read your messages 
+                    again and again, smiling like crazy. You have no idea how happy 
+                    those simple words made me.
+                </p>
+            </div>
+            
+            <div class="feeling-tag">
+                <span class="feeling-emoji">😊</span>
+                <span class="feeling-text">Pure Happiness</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SLIDE 4: FIRST CALL ==================== -->
+    <section class="slide-card" id="memory3">
+        <div class="slide-content memory-content">
+            <div class="memory-date">
+                <span class="date-day">10</span>
+                <span class="date-month">January</span>
+            </div>
+            
+            <h2 class="memory-title">Hearing Your Voice</h2>
+            
+            <div class="call-visual">
+                <div class="call-ring"></div>
+                <div class="call-ring"></div>
+                <div class="call-icon">📞</div>
+            </div>
+            
+            <div class="memory-card">
+                <div class="memory-icon">🎵</div>
+                <p class="memory-text">
+                    Your voice... it's like a melody that calms my soul. 
+                    That first call, I was so nervous but so happy. 
+                    Now your voice is my favorite sound in the whole world.
+                </p>
+            </div>
+            
+            <div class="feeling-tag">
+                <span class="feeling-emoji">💓</span>
+                <span class="feeling-text">Heart Racing</span>
+            </div>
+            
+            <p class="memory-urdu">"تمہاری آواز میری سب سے پسندیدہ دھن ہے"</p>
+        </div>
+    </section>
+
+    <!-- ==================== SLIDE 5: THE PROPOSAL ==================== -->
+    <section class="slide-card" id="proposal">
+        <div class="slide-content memory-content">
+            <div class="memory-date">
+                <span class="date-day">08</span>
+                <span class="date-month">February</span>
+            </div>
+            
+            <h2 class="memory-title">The Day I Proposed</h2>
+            
+            <div class="proposal-visual">
+                <div class="ring-box">
+                    <div class="ring">💍</div>
+                </div>
+            </div>
+            
+            <div class="memory-card">
+                <div class="memory-icon">💒</div>
+                <p class="memory-text">
+                    My heart was pounding so fast when I asked you for marriage. 
+                    That moment changed everything. I knew you were the one I wanted 
+                    to spend my whole life with — in this dunya and akhirah.
+                </p>
+            </div>
+            
+            <div class="feeling-tag">
+                <span class="feeling-emoji">🤲</span>
+                <span class="feeling-text">A Prayer Answered</span>
+            </div>
+            
+            <p class="memory-urdu">"تم سے شادی کا سوال — میری زندگی کا سب سے اہم لمحہ"</p>
+        </div>
+    </section>
+
+    <!-- ==================== SLIDE 6: THE RED ROSE ==================== -->
+    <section class="slide-card" id="redrose">
+        <div class="slide-content memory-content">
+            <div class="memory-date">
+                <span class="date-day">22</span>
+                <span class="date-month">February</span>
+            </div>
+            
+            <div class="time-badge">Around 10:30</div>
+            
+            <h2 class="memory-title">The Red Rose You Gave Me</h2>
+            
+            <div class="rose-visual">
+                <div class="rose-glow"></div>
+                <span class="rose-emoji">🌹</span>
+            </div>
+            
+            <div class="memory-card">
+                <div class="memory-icon">🥹</div>
+                <p class="memory-text">
+                    When you gave me that red rose, I felt like the luckiest person alive. 
+                    My heart was so full, I became emotional. That simple flower meant 
+                    more to me than you'll ever know. It was a symbol of your love.
+                </p>
+            </div>
+            
+            <div class="feeling-tag">
+                <span class="feeling-emoji">😭</span>
+                <span class="feeling-text">Emotional & Lucky</span>
+            </div>
+            
+            <p class="memory-urdu">"وہ گلاب آج بھی میرے دل میں محفوظ ہے"</p>
+        </div>
+    </section>
+
+    <!-- ==================== SLIDE 7: OUR TALKS ==================== -->
+    <section class="slide-card" id="ourtalks">
+        <div class="slide-content memory-content">
+            <h2 class="memory-title">Our Good & Bad Talks</h2>
+            <p class="memory-subtitle">Every conversation brought us closer</p>
+            
+            <div class="talks-container">
+                <div class="talk-card good-talk">
+                    <div class="talk-icon">😊</div>
+                    <h3>The Good Talks</h3>
+                    <p>When we laugh together, share dreams, and plan our future</p>
+                </div>
+                
+                <div class="talk-card bad-talk">
+                    <div class="talk-icon">😔</div>
+                    <h3>The Hard Talks</h3>
+                    <p>Even our difficult moments made our bond stronger</p>
+                </div>
+            </div>
+            
+            <div class="memory-card special-card">
+                <div class="memory-icon">💕</div>
+                <p class="memory-text">
+                    Every conversation with you — happy or sad — makes me feel so special. 
+                    I know I am the one who is closest to your heart. 
+                    You share everything with me, and that trust means the world to me.
+                </p>
+            </div>
+            
+            <div class="feeling-tag">
+                <span class="feeling-emoji">🥰</span>
+                <span class="feeling-text">Feeling Special</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SLIDE 8: HOW YOU MAKE ME FEEL ==================== -->
+    <section class="slide-card" id="feelings">
+        <div class="slide-content feelings-content">
+            <h2 class="feelings-title">How You Make Me Feel</h2>
+            <p class="feelings-subtitle">Every moment with you is magical</p>
+            
+            <div class="feelings-grid">
+                <div class="feeling-card">
+                    <div class="feeling-icon">☀️</div>
+                    <h3>When You Text Me</h3>
+                    <p>My whole day becomes brighter</p>
+                </div>
+                
+                <div class="feeling-card">
+                    <div class="feeling-icon">🌙</div>
+                    <h3>When You Say Goodnight</h3>
+                    <p>I sleep with a smile</p>
+                </div>
+                
+                <div class="feeling-card">
+                    <div class="feeling-icon">🤲</div>
+                    <h3>When You Make Dua</h3>
+                    <p>I feel so blessed</p>
+                </div>
+                
+                <div class="feeling-card">
+                    <div class="feeling-icon">😊</div>
+                    <h3>When You Laugh</h3>
+                    <p>My heart melts completely</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SLIDE 9: LOVE LETTER ==================== -->
+    <section class="slide-card" id="letter">
+        <div class="slide-content letter-content">
+            <div class="letter-paper">
+                <div class="letter-header">
+                    <span class="letter-to">To My Sana,</span>
+                </div>
+                
+                <div class="letter-body">
+                    <p>
+                        Every day I thank Allah for bringing you into my life. 
+                        You are not just someone I love — you are my peace, my happiness, 
+                        my answered prayer.
+                    </p>
+                    <p>
+                        When I talk to you, the world feels right. 
+                        When you smile, my heart finds its home. 
+                        When you say my name, I feel complete.
+                    </p>
+                    <p class="letter-urdu">
+                        "تم میری زندگی کی سب سے خوبصورت دعا ہو"
+                    </p>
+                </div>
+                
+                <div class="letter-footer">
+                    <span class="letter-closing">Forever Yours,</span>
+                    <span class="letter-signature">Your Person 💕</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SLIDE 10: PROMISES ==================== -->
+    <section class="slide-card" id="promises">
+        <div class="slide-content promises-content">
+            <h2 class="promises-title">My Promises To You</h2>
+            <p class="promises-subtitle">اللہ کے سامنے میرے وعدے</p>
+            
+            <div class="promises-scroll">
+                <div class="promise-card">
+                    <div class="promise-number">01</div>
+                    <div class="promise-text">
+                        <h3>To Love You</h3>
+                        <p>Unconditionally, endlessly, in every way that matters</p>
+                    </div>
+                </div>
+                
+                <div class="promise-card">
+                    <div class="promise-number">02</div>
+                    <div class="promise-text">
+                        <h3>To Protect Your Heart</h3>
+                        <p>Your happiness will always be my priority</p>
+                    </div>
+                </div>
+                
+                <div class="promise-card">
+                    <div class="promise-number">03</div>
+                    <div class="promise-text">
+                        <h3>To Grow With You</h3>
+                        <p>In deen, in love, in everything beautiful</p>
+                    </div>
+                </div>
+                
+                <div class="promise-card">
+                    <div class="promise-number">04</div>
+                    <div class="promise-text">
+                        <h3>To Be Your Sukoon</h3>
+                        <p>Your peace in this world and the next</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SLIDE 11: EIDI ==================== -->
+    <section class="slide-card" id="eidi">
+        <div class="slide-content eidi-content">
+            <h2 class="eidi-title">Your Eid Gift</h2>
+            <p class="eidi-subtitle">عید مبارک، میری جان</p>
+            
+            <div class="gift-wrapper" id="giftBoxBtn">
+                <div class="gift-sparkles">
+                    <span>✨</span><span>💕</span><span>✨</span>
+                </div>
+                <div class="gift-box-modern">
+                    <div class="gift-top">
+                        <div class="gift-ribbon-bow"></div>
+                    </div>
+                    <div class="gift-bottom">
+                        <div class="gift-pattern"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="gift-cta">Tap to open your surprise</p>
+        </div>
+    </section>
+
+    <!-- ==================== SLIDE 12: FINALE ==================== -->
+    <section class="slide-card" id="finale">
+        <div class="slide-content finale-content">
+            <div class="finale-decoration">💕</div>
+            
+            <h2 class="finale-title">Forever & Always</h2>
+            
+            <div class="finale-verse">
+                <p class="verse-urdu">"دنیا میں بھی تم، آخرت میں بھی تم"</p>
+                <p class="verse-english">You, in this world. You, in the hereafter.</p>
+            </div>
+            
+            <div class="finale-message">
+                <p>This is just the beginning of our beautiful story.</p>
+                <p>May Allah bless our journey together. 🤲</p>
+            </div>
+            
+            <div class="finale-signature">
+                <p class="sig-main">With All My Love</p>
+                <p class="sig-sub">Your Future Husband 💍</p>
+            </div>
+            
+            <div class="finale-footer">
+                <span>Made with love</span>
+                <span>•</span>
+                <span>Eid Mubarak 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MODAL ==================== -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            
+            <div class="modal-content">
+                <div class="modal-emoji">🎁</div>
+                <h3 class="modal-title">Surprise!</h3>
+                
+                <div class="modal-body">
+                    <p class="modal-main">Your real gift is waiting...</p>
+                    <p class="modal-sub">To be given in person! 💕</p>
+                    
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <span>💝</span>
+                            <span>Wrapped with love</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>💌</span>
+                            <span>A letter from my heart</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>🤲</span>
+                            <span>Prayers for our future</span>
+                        </div>
+                    </div>
+                    
+                    <p class="modal-urdu">"تمہارے ہاتھوں میں رکھوں گا یہ تحفہ"</p>
+                </div>
+                
+                <button class="modal-btn" id="acceptBtn">I Can't Wait! 💕</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti -->
+    <div class="confetti-container" id="confetti"></div>
+
+    <!-- Audio Player -->
     <div class="audio-player" id="audioPlayer">
-        <div class="audio-prompt" id="audioPrompt">🎵 Play Nasheed</div>
         <button class="audio-btn" id="audioBtn">
-            <svg id="playIcon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <svg id="playIcon" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z"/>
             </svg>
             <div id="soundWaves" class="sound-waves" style="display: none;">
-                <div class="sound-wave"></div>
-                <div class="sound-wave"></div>
-                <div class="sound-wave"></div>
+                <span></span><span></span><span></span>
             </div>
         </button>
     </div>
-    <!-- Maher Zain - Baraka Allahu Lakuma (Islamic Wedding Nasheed) -->
     <audio id="bgMusic" loop preload="auto" src="https://ia600605.us.archive.org/8/items/MaherZainBarakaAllahuLakuma/Maher%20Zain%20-%20Baraka%20Allahu%20Lakuma.mp3"></audio>
 
-    <!-- ==================== TIMELINE SECTION ==================== -->
-    <section id="timeline">
-        <div class="section-header">
-            <h2 class="section-title font-dancing">Our Story</h2>
-            <p class="section-subtitle font-inter">Every moment with you has been a beautiful chapter</p>
-            <p class="shayri-small font-amiri">"ہر لمحہ تیرے ساتھ ایک نعمت ہے"</p>
-        </div>
-        
-        <div class="timeline">
-            <div class="timeline-line"></div>
-            
-            <div class="timeline-item" data-animate>
-                <div class="timeline-content">
-                    <span class="timeline-date font-inter">January 2, 2025 • 3:40 PM</span>
-                    <h3 class="timeline-title font-dancing">First Meet</h3>
-                    <p class="timeline-location font-inter">📍 Set by our parents</p>
-                    <div class="timeline-description">
-                        <p class="timeline-description-title font-inter">The Moment Everything Changed</p>
-                        <p class="timeline-description-text font-inter">When our families arranged for us to meet, I never expected to find someone so beautiful. At exactly 3:40 PM, my life changed forever when I first saw you, Sana.</p>
-                        <p class="shayri-card font-amiri">"تیرے آنے کی آہٹ ہو گئی<br>دل کی دھڑکن تیز ہو گئی"</p>
-                    </div>
-                </div>
-                <div class="timeline-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                    </svg>
-                </div>
-            </div>
-            
-            <div class="timeline-item" data-animate>
-                <div class="timeline-content">
-                    <span class="timeline-date font-inter">January 7, 2025</span>
-                    <h3 class="timeline-title font-dancing">First Chat</h3>
-                    <p class="timeline-location font-inter">💬 Where words became magic</p>
-                    <div class="timeline-description">
-                        <p class="timeline-description-title font-inter">The Beginning of Us</p>
-                        <p class="timeline-description-text font-inter">Five days felt like an eternity waiting to talk to you. When we finally started chatting, every message from you made my heart race.</p>
-                        <p class="shayri-card font-amiri">"اور کچھ دیر ٹھہر جاؤ نہ<br>ابھی کچھ باتیں باقی ہیں"</p>
-                    </div>
-                </div>
-                <div class="timeline-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
-                    </svg>
-                </div>
-            </div>
-            
-            <div class="timeline-item" data-animate>
-                <div class="timeline-content">
-                    <span class="timeline-date font-inter">January 10, 2025</span>
-                    <h3 class="timeline-title font-dancing">First Call</h3>
-                    <p class="timeline-location font-inter">📞 Your voice became my favorite sound</p>
-                    <div class="timeline-description">
-                        <p class="timeline-description-title font-inter">When I Heard Your Voice</p>
-                        <p class="timeline-description-text font-inter">Hearing your voice for the first time... Sana, it was like music. We talked, we laughed, we shared so much. I knew then that you were special.</p>
-                        <p class="shayri-card font-amiri">"تم بولو تو ہر بات حسین لگتی ہے<br>آواز تمہاری میری جان لگتی ہے"</p>
-                    </div>
-                </div>
-                <div class="timeline-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                    </svg>
-                </div>
-            </div>
-
-            <div class="timeline-item" data-animate>
-                <div class="timeline-content">
-                    <span class="timeline-date font-inter">Every Day Since...</span>
-                    <h3 class="timeline-title font-dancing">We Share Everything</h3>
-                    <p class="timeline-location font-inter">💕 Building our bond</p>
-                    <div class="timeline-description">
-                        <p class="timeline-description-title font-inter">Our Beautiful Journey</p>
-                        <p class="timeline-description-text font-inter">From sharing our dreams to our fears, our jokes to our secrets — every moment with you, Sana, has been a gift. You've become my best friend, my confidante, my everything.</p>
-                        <p class="shayri-card font-amiri">"دل ہی تو ہے نہ سنگ و خشت<br>درد سے بھر نہ آئے کیوں" — فیض</p>
-                    </div>
-                </div>
-                <div class="timeline-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== WHY YOU SECTION ==================== -->
-    <section id="whyYou">
-        <div class="section-header">
-            <h2 class="section-title font-dancing">Why You?</h2>
-            <p class="section-subtitle font-inter">There are a million reasons, but here are just a few...</p>
-            <p class="shayri-small font-amiri">"اللہ نے تمہیں میرے لیے بنایا ہے"</p>
-        </div>
-        
-        <div class="carousel-container">
-            <div class="carousel hide-scrollbar" id="carousel">
-                <div class="carousel-card">
-                    <div class="carousel-emoji">😊</div>
-                    <div class="carousel-number">1</div>
-                    <h3 class="carousel-title font-dancing">Your Smile</h3>
-                    <p class="carousel-text font-inter">The way your eyes crinkle when you laugh makes my heart skip a beat.</p>
-                    <p class="shayri-card font-amiri">"تمہاری مسکراہٹ میری جنت ہے"</p>
-                </div>
-                <div class="carousel-card">
-                    <div class="carousel-emoji">🤲</div>
-                    <div class="carousel-number">2</div>
-                    <h3 class="carousel-title font-dancing">Your Imaan</h3>
-                    <p class="carousel-text font-inter">Your faith in Allah inspires me to be a better Muslim every day.</p>
-                    <p class="shayri-card font-amiri">"تمہارا ایمان میری طاقت ہے"</p>
-                </div>
-                <div class="carousel-card">
-                    <div class="carousel-emoji">💝</div>
-                    <div class="carousel-number">3</div>
-                    <h3 class="carousel-title font-dancing">Your Kindness</h3>
-                    <p class="carousel-text font-inter">The way you treat everyone with warmth and compassion.</p>
-                    <p class="shayri-card font-amiri">"تمہارے اخلاق میری دولت ہیں"</p>
-                </div>
-                <div class="carousel-card">
-                    <div class="carousel-emoji">🌙</div>
-                    <div class="carousel-number">4</div>
-                    <h3 class="carousel-title font-dancing">Your Dua</h3>
-                    <p class="carousel-text font-inter">Knowing you pray for us gives me peace like nothing else.</p>
-                    <p class="shayri-card font-amiri">"تمہاری دعائیں میرا سہارا ہیں"</p>
-                </div>
-                <div class="carousel-card">
-                    <div class="carousel-emoji">❤️</div>
-                    <div class="carousel-number">5</div>
-                    <h3 class="carousel-title font-dancing">Your Heart</h3>
-                    <p class="carousel-text font-inter">The depth of your love - you have the most beautiful soul.</p>
-                    <p class="shayri-card font-amiri">"تمہارا دل اللہ کا نور ہے"</p>
-                </div>
-            </div>
-            <div class="carousel-dots" id="carouselDots"></div>
-            <p class="carousel-hint font-inter">← Swipe to see more →</p>
-        </div>
-    </section>
-
-    <!-- ==================== PROMISES SECTION ==================== -->
-    <section id="promises">
-        <div class="section-header">
-            <h2 class="section-title font-dancing">My Promises to You</h2>
-            <p class="section-subtitle font-inter">These vows I make before Allah</p>
-            <p class="shayri-small font-amiri">"میرے وعدے اللہ کے سامنے ہیں"</p>
-        </div>
-        
-        <div class="promises-grid">
-            <div class="promise-card" data-animate>
-                <div class="promise-icon">🤲</div>
-                <h3 class="promise-title font-dancing">To Pray Together</h3>
-                <p class="promise-text font-inter">I promise we will grow in our deen together, side by side.</p>
-                <p class="shayri-card font-amiri">"ساتھ نماز، ساتھ جنت"</p>
-            </div>
-            <div class="promise-card" data-animate>
-                <div class="promise-icon">🛡️</div>
-                <h3 class="promise-title font-dancing">To Protect You</h3>
-                <p class="promise-text font-inter">I promise to guard your heart, your honor, and your happiness.</p>
-                <p class="shayri-card font-amiri">"تمہاری حفاظت میرا فرض ہے"</p>
-            </div>
-            <div class="promise-card" data-animate>
-                <div class="promise-icon">☀️</div>
-                <h3 class="promise-title font-dancing">To Be Your Peace</h3>
-                <p class="promise-text font-inter">I promise to be your sukoon in this chaotic world.</p>
-                <p class="shayri-card font-amiri">"میں تمہارا سکون بنوں گا"</p>
-            </div>
-            <div class="promise-card" data-animate>
-                <div class="promise-icon">♾️</div>
-                <h3 class="promise-title font-dancing">Forever & Akhirah</h3>
-                <p class="promise-text font-inter">I promise to love you in this life and pray for us in Jannah.</p>
-                <p class="shayri-card font-amiri">"دنیا میں بھی، آخرت میں بھی"</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== SHAYRI SECTION ==================== -->
-    <section id="shayri">
-        <div class="section-header">
-            <h2 class="section-title font-dancing">Words from My Heart</h2>
-            <p class="section-subtitle font-inter">Some feelings can only be expressed in poetry</p>
-        </div>
-        
-        <div class="shayri-gallery">
-            <div class="shayri-item" data-animate>
-                <div class="shayri-content font-amiri">
-                    <p>"محبت وہ نہیں جو دل میں ہو</p>
-                    <p>محبت وہ ہے جو دعاؤں میں ہو"</p>
-                </div>
-                <p class="shayri-translation font-inter">"Love is not just what's in the heart, love is what's in your prayers"</p>
-            </div>
-            <div class="shayri-item" data-animate>
-                <div class="shayri-content font-amiri">
-                    <p>"تم سے ملنا بھی اک عبادت ہے</p>
-                    <p>تم سے ملنا خدا کی رحمت ہے"</p>
-                </div>
-                <p class="shayri-translation font-inter">"Meeting you is like worship, meeting you is Allah's mercy"</p>
-            </div>
-            <div class="shayri-item" data-animate>
-                <div class="shayri-content font-amiri">
-                    <p>"اللہ سے مانگی تھی خوشیاں</p>
-                    <p>اس نے تمہیں بھیج دیا"</p>
-                </div>
-                <p class="shayri-translation font-inter">"I asked Allah for happiness, He sent you"</p>
-            </div>
-            <div class="shayri-item" data-animate>
-                <div class="shayri-content font-amiri">
-                    <p>"جنت کی حور نہیں چاہیے مجھے</p>
-                    <p>بس تم ہو میری جنت"</p>
-                </div>
-                <p class="shayri-translation font-inter">"I don't need the hoor of Jannah, you are my paradise"</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== EIDI REVEAL SECTION ==================== -->
-    <section id="eidi" class="eidi-section">
-        <div class="section-header">
-            <h2 class="section-title font-dancing">Your Eidi 💝</h2>
-            <p class="shayri-small font-amiri">"عید کا تحفہ، دل سے دل تک"</p>
-        </div>
-        
-        <!-- Compact Gift Box -->
-        <div class="gift-reveal-container">
-            <div class="gift-box-wrapper" id="giftBoxBtn">
-                <div class="gift-glow"></div>
-                <div class="gift-box">
-                    <div class="gift-lid">
-                        <div class="gift-bow">
-                            <div class="bow-left"></div>
-                            <div class="bow-right"></div>
-                            <div class="bow-center"></div>
-                        </div>
-                    </div>
-                    <div class="gift-body">
-                        <div class="gift-ribbon-v"></div>
-                        <div class="gift-ribbon-h"></div>
-                    </div>
-                </div>
-                <p class="gift-prompt font-inter animate-bounce">✨ Tap to reveal ✨</p>
-            </div>
-            
-            <p class="mystery-hint font-dancing">Something special awaits... 💕</p>
-        </div>
-    </section>
-
-    <!-- Modal -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal gift-modal">
-            <button class="modal-close" id="modalClose">✕</button>
-            
-            <div class="modal-surprise-icon">
-                <span class="surprise-emoji">🎁</span>
-                <span class="surprise-emoji delay">💝</span>
-            </div>
-            
-            <h3 class="modal-title font-dancing">Surprise! 💓</h3>
-            
-            <div class="modal-content">
-                <div class="reveal-card">
-                    <div class="reveal-badge">🌙 Eid Special 🌙</div>
-                    <p class="reveal-main font-dancing">Your Gift Awaits...</p>
-                    <p class="reveal-sub font-inter">In Person! 💕</p>
-                    
-                    <div class="reveal-details">
-                        <div class="detail-item">
-                            <span class="detail-icon">📦</span>
-                            <span class="detail-text font-inter">Wrapped with love & prayers</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-icon">💌</span>
-                            <span class="detail-text font-inter">A letter from my heart</span>
-                        </div>
-                    </div>
-                    
-                    <p class="shayri-card font-amiri">"تمہارے ہاتھوں میں رکھوں گا یہ تحفہ"</p>
-                </div>
-            </div>
-            
-            <button class="modal-btn font-inter" id="acceptBtn">I'm So Excited! 💕</button>
-        </div>
-    </div>
-
-    <!-- Confetti Container -->
-    <div class="confetti" id="confetti"></div>
-
-    <!-- ==================== FOOTER ==================== -->
-    <footer id="footer">
-        <div class="footer-hearts">
-            <span class="footer-heart">💕</span>
-            <span class="footer-heart">🌙</span>
-            <span class="footer-heart">💕</span>
-        </div>
-        <h3 class="footer-title font-dancing">Forever & Always</h3>
-        <p class="footer-text font-inter">This is just the beginning of our beautiful journey together. May Allah bless our bond.</p>
-        
-        <div class="footer-shayri">
-            <p class="shayri font-amiri">"ہر جنم میں تم ہی ہو، ہر جہاں میں تم ہی ہو</p>
-            <p class="shayri font-amiri">دنیا میں بھی تم، آخرت میں بھی تم"</p>
-        </div>
-        
-        <div class="footer-signature">
-            <p class="footer-signature-text font-dancing">With all my love,</p>
-            <p class="footer-signature-name font-inter">Your Future Husband 💍</p>
-        </div>
-        <p class="footer-copyright font-inter">Made with 💕 just for you • Eid Mubarak 2026</p>
-    </footer>
-
-    <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
